@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC1706E717BE0BE80013FC0A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1706E617BE0BE80013FC0A /* FirstViewController.m */; };
 		BC7B7DA417BDD1EB00ADD0FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7B7DA317BDD1EB00ADD0FB /* UIKit.framework */; };
 		BC7B7DA617BDD1EB00ADD0FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7B7DA517BDD1EB00ADD0FB /* Foundation.framework */; };
 		BC7B7DA817BDD1EB00ADD0FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7B7DA717BDD1EB00ADD0FB /* CoreGraphics.framework */; };
@@ -18,10 +19,12 @@
 		BC7B7DBA17BDD1EF00ADD0FB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7B7DB917BDD1EF00ADD0FB /* Default-568h@2x.png */; };
 		BC7B7DC217BDD24E00ADD0FB /* GLCEventHandlerNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B7DC117BDD24E00ADD0FB /* GLCEventHandlerNotification.m */; };
 		BC7B7DC517BDD79C00ADD0FB /* TestJob.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B7DC417BDD79C00ADD0FB /* TestJob.m */; };
-		BC7B7DC817BDDDDA00ADD0FB /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B7DC717BDDDDA00ADD0FB /* TestViewController.m */; };
+		BC7B7DC817BDDDDA00ADD0FB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B7DC717BDDDDA00ADD0FB /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC1706E517BE0BE80013FC0A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		BC1706E617BE0BE80013FC0A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		BC7B7DA017BDD1EB00ADD0FB /* GLCEventHandlerNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLCEventHandlerNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7B7DA317BDD1EB00ADD0FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BC7B7DA517BDD1EB00ADD0FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,8 +42,8 @@
 		BC7B7DC117BDD24E00ADD0FB /* GLCEventHandlerNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLCEventHandlerNotification.m; sourceTree = "<group>"; };
 		BC7B7DC317BDD79C00ADD0FB /* TestJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestJob.h; sourceTree = "<group>"; };
 		BC7B7DC417BDD79C00ADD0FB /* TestJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestJob.m; sourceTree = "<group>"; };
-		BC7B7DC617BDDDDA00ADD0FB /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		BC7B7DC717BDDDDA00ADD0FB /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		BC7B7DC617BDDDDA00ADD0FB /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		BC7B7DC717BDDDDA00ADD0FB /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC1706E817BE10520013FC0A /* TestViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC7B7DC617BDDDDA00ADD0FB /* SecondViewController.h */,
+				BC7B7DC717BDDDDA00ADD0FB /* SecondViewController.m */,
+				BC1706E517BE0BE80013FC0A /* FirstViewController.h */,
+				BC1706E617BE0BE80013FC0A /* FirstViewController.m */,
+			);
+			name = TestViewControllers;
+			sourceTree = "<group>";
+		};
 		BC7B7D9717BDD1E800ADD0FB = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +101,7 @@
 		BC7B7DA917BDD1EB00ADD0FB /* GLCEventHandlerNotification */ = {
 			isa = PBXGroup;
 			children = (
+				BC1706E817BE10520013FC0A /* TestViewControllers */,
 				BC7B7DB217BDD1EE00ADD0FB /* AppDelegate.h */,
 				BC7B7DB317BDD1EE00ADD0FB /* AppDelegate.m */,
 				BC7B7DAA17BDD1EC00ADD0FB /* Supporting Files */,
@@ -94,8 +109,6 @@
 				BC7B7DC117BDD24E00ADD0FB /* GLCEventHandlerNotification.m */,
 				BC7B7DC317BDD79C00ADD0FB /* TestJob.h */,
 				BC7B7DC417BDD79C00ADD0FB /* TestJob.m */,
-				BC7B7DC617BDDDDA00ADD0FB /* TestViewController.h */,
-				BC7B7DC717BDDDDA00ADD0FB /* TestViewController.m */,
 			);
 			path = GLCEventHandlerNotification;
 			sourceTree = "<group>";
@@ -183,7 +196,8 @@
 				BC7B7DB417BDD1EE00ADD0FB /* AppDelegate.m in Sources */,
 				BC7B7DC217BDD24E00ADD0FB /* GLCEventHandlerNotification.m in Sources */,
 				BC7B7DC517BDD79C00ADD0FB /* TestJob.m in Sources */,
-				BC7B7DC817BDDDDA00ADD0FB /* TestViewController.m in Sources */,
+				BC7B7DC817BDDDDA00ADD0FB /* SecondViewController.m in Sources */,
+				BC1706E717BE0BE80013FC0A /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +314,7 @@
 				BC7B7DBF17BDD1EF00ADD0FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

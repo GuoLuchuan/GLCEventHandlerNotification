@@ -7,11 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "TestViewController.h"
+#import "FirstViewController.h"
 
 @interface AppDelegate ()
 {
-    UIViewController *_firstViewController;
+    FirstViewController *_firstViewController;
 }
 
 @end
@@ -24,10 +24,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    _firstViewController = [[UIViewController alloc] init];
+    _firstViewController = [[FirstViewController alloc] init];
     
     UINavigationController *root = [[UINavigationController alloc] initWithRootViewController:_firstViewController];
-    root.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(pushSecondViewController)];
     
     self.window.rootViewController = root;
     
@@ -35,10 +34,6 @@
     return YES;
 }
 
-- (void)pushSecondViewController
-{
-    
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

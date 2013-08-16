@@ -6,21 +6,22 @@
 //  Copyright (c) 2013年 yours. All rights reserved.
 //
 
-#import "TestViewController.h"
+#import "SecondViewController.h"
 
 #import "TestJob.h"
 
-@interface TestViewController ()
+@interface SecondViewController ()
 {
     TestJob *_testJob;
 }
 
 @end
 
-@implementation TestViewController
+@implementation SecondViewController
 
 - (void)dealloc
 {
+    NSLog(@"SecondViewController dealloc");
     [_testJob removeObserverForFinish:self];
     [_testJob removeObserverForStart:self];
 }
@@ -34,7 +35,8 @@
         [_testJob addObserver:self startHandler:^{
             NSLog(@"JOB START !!!");
         }];
-        [_testJob addObserver:self startHandler:^{
+        
+        [_testJob addObserver:self finishHandler:^{
             NSLog(@"JOB FINISH !!!");
         }];
     }

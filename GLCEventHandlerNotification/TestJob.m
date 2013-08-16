@@ -30,24 +30,41 @@
     return self;
 }
 
-
+#pragma mark -
+#pragma mark How To Use
 - (void)testStart
 {
-    [_onStarEventHandlerNotification fireEventUsingBlock:^(StartHandler startHandler) {
-        startHandler();
-    }];
     
-    int testNum = 0;
-    for (int i = 0; i < 9999; i++) {
-        testNum++;
-    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [_onStarEventHandlerNotification fireEventUsingBlock:^(StartHandler startHandler) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                startHandler();
+            });
+            
+        }];
+        
+        [self doYourWork];
+
+        [_onFinishEventHandlerNotification fireEventUsingBlock:^(FinishHandler finishHandler) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                finishHandler();
+            });
+            
+        }];
+    });
     
-    [_onFinishEventHandlerNotification fireEventUsingBlock:^(FinishHandler finishHandler) {
-        finishHandler();
-    }];
+
 }
 
-
+- (void)doYourWork
+{
+    int testNum = 0;
+    for (int i = 0; i < 999999999; i++) {
+        testNum++;
+    }
+}
 
 #pragma mark -
 #pragma mark Deal With Observer
